@@ -1,11 +1,11 @@
 {
   "dependencies": {
+    "datamaps": "^0.5.9",
     "parcel": "^2.11.0"
   },
   "name": "aj91-cloud",
   "version": "1.0.0",
   "description": "Testing",
-
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
