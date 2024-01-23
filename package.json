@@ -1,5 +1,22 @@
 {
   "dependencies": {
     "parcel": "^2.11.0"
-  }
+  },
+  "name": "aj91-cloud",
+  "version": "1.0.0",
+  "description": "Testing",
+  "main": "src/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asjones-code/aj91-cloud.git"
+  },
+  "author": "aj91",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asjones-code/aj91-cloud/issues"
+  },
+  "homepage": "https://github.com/asjones-code/aj91-cloud#readme"
 }
