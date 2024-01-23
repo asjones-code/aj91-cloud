@@ -5,7 +5,7 @@
   "name": "aj91-cloud",
   "version": "1.0.0",
   "description": "Testing",
-  "main": "src/index.html",
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
