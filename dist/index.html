@@ -1,12 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aj91 - in the cloud!</title>
-</head>
+<meta charset="utf-8">
+
 <body>
-    <h1>Hello, world!</h1>
-    
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <!-- I recommend you host this file on your own, since this will change without warning -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datamaps/0.5.9/datamaps.all.min.js"></script>
+    <div id="mapArea">
+        <div id="selectedStates">
+            <div id="usa-map" style="width: 800px; height: 500px"></div>
+        </div>
+
+    </div>
+    <script>var map = new Datamap({
+  element: document.getElementById('usa-map'),
+  geographyConfig: {
+    dataJson: './COD.topo.json'
+  },
+  scope: 'world',
+  setProjection: function setProjection(element) {
+    var projection = d3.geo.mercator().center([20, -5]).scale(1300).translate([element.offsetWidth / 2, element.offsetHeight / 2]);
+    var path = d3.geo.path().projection(projection);
+    return {
+      path: path,
+      projection: projection
+    };
+  },
+  done: function done(datamap) {
+    datamap.svg.selectAll('.datamaps-subunit').on('click', function (geography) {
+      console.log(geography.id + " : " + geography.properties.name);
+
+      //var data = {};
+      //data[geography.id] = "green";
+      //map.updateChoropleth(data);
+
+      var el = document.querySelector("." + geography.id);
+    });
+  }
+});
+map.labels();</script>
 </body>
-</html>
